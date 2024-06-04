@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 
 const Competenze = () => {
   return (
-    <Container className=" scroller px-5">
+    <Container className=" scroller px-5" id="competenze">
       <Row className="scroller-inner">
         <Col sm={3}>
           <img src="/public/html5.svg" alt="html-logo" width={150} />

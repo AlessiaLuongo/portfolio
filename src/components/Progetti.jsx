@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 
 const Progetti = () => {
   return (
-    <Container>
+    <Container id="progetti">
       <Row className="p-5 justify-content-center align-content-center">
         <Col xs={12} md={8} lg={8}>
           <p>
