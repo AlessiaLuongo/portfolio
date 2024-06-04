@@ -21,11 +21,11 @@ body {
   gap: 1rem;
   width: fit-content;
   flex-wrap: nowrap;
-  animation: scroll 30s infinite linear;
+  animation: scroll 15s infinite linear;
 }
 
 @keyframes scroll {
   100% {
-    transform: translateX(calc(-100% - 0.5rem));
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }

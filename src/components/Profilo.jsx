@@ -2,8 +2,8 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Profilo = () => {
   return (
-    <Container id="profilo">
-      <Row className="my-5">
+    <Container id="profilo" className="py-5">
+      <Row className="my-3">
         <Col>
           <h1 className="text-center">JUNIOR FULL STACK DEVELOPER</h1>
         </Col>

@@ -15,6 +15,12 @@ const Contatti = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendCustomEmail(details);
+
+    setDetails({
+      subject: "",
+      message: "",
+      to_email: "alessialuongoworkspace@gmail.com",
+    });
   };
 
   return (
@@ -39,6 +45,7 @@ const Contatti = () => {
               <Form.Control
                 as="textarea"
                 required
+                placeholder="Provvederò a rispondere il prima possibile"
                 rows={3}
                 value={details.message}
                 onChange={(e) =>
