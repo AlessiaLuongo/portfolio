@@ -11,12 +11,12 @@ const Progetti = () => {
             Durante il percorso con Epicode ho avuto modo di lavorare a progetti
             reali sia in maniera individuale che in gruppo.
           </p>
-          <p>L&#39;ultimo progetto che ho realizzato è il Capstone:</p>
-          <p>una Web App creata con Vite e si chiama Hello World.</p>
+          <p>L&#39;ultimo progetto che ho realizzato è il Capstone.</p>
           <p>
-            Questo progetto ha come obiettivo di promuovere il territorio e dare
-            modo alle persone di condividere e conoscere attività e luoghi, che
-            possono essere sia outdoor che indoor.
+            Questa Web App creata con Vite si chiama Hello World e ha come
+            obiettivo di promuovere il territorio e dare modo alle persone di
+            condividere e conoscere attività e luoghi, che possono essere sia
+            outdoor che indoor.
           </p>
           <p>
             Di seguito si troverà il link che porterà alla repository del
