@@ -1,6 +1,7 @@
 body {
   background-color: #2b3035;
   color: #9fa2a4;
+  position: relative;
 }
 
 .scroller {

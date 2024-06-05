@@ -25,15 +25,34 @@ const Contatti = () => {
 
   return (
     <Container id="contatti">
+      <Row className="navbar text-center">
+        <Col className="my-3">Come contattarmi:</Col>
+        <Col xs={12} md={12} lg={12} className="my-2">
+          <a
+            href="https://www.linkedin.com/in/alessia-luongo-b61832305/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none"
+          >
+            <i className="bi bi-linkedin"> Alessia Luongo</i>
+          </a>
+        </Col>
+
+        <Col xs={12} md={12} lg={12} className="mb-3">
+          <i className="bi bi-envelope-at"> alessialuongoworkspace@gmail.com</i>
+        </Col>
+        <Col xs={12} md={12} lg={12} className="mt-2">
+          Oppure direttamente attraverso questo Form:
+        </Col>
+      </Row>
       <Row className="p-5 justify-content-center align-content-center">
         <Col xs={12} md={8} lg={8}>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="subject">
-              <Form.Label>La sua email</Form.Label>
               <Form.Control
                 type="email"
                 required
-                placeholder="email@example.com"
+                placeholder="Inserisca la sua mail"
                 value={details.subject}
                 onChange={(e) =>
                   setDetails({ ...details, subject: e.target.value })
@@ -41,11 +60,10 @@ const Contatti = () => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="message">
-              <Form.Label>Mi scriva qui</Form.Label>
               <Form.Control
                 as="textarea"
                 required
-                placeholder="Provvederò a rispondere il prima possibile"
+                placeholder="..."
                 rows={3}
                 value={details.message}
                 onChange={(e) =>
@@ -56,6 +74,7 @@ const Contatti = () => {
             <Button
               type="submit"
               disabled={!details.subject || !details.message}
+              variant="outline-light"
             >
               Invia
             </Button>
