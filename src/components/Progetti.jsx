@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import HelloWorld from "./HelloWorld";
 import { useEffect, useRef, useState } from "react";
+import { Col } from "react-bootstrap";
 
 const Progetti = ({ setPage }) => {
   const progetti = useRef(null);
@@ -38,7 +39,14 @@ const Progetti = ({ setPage }) => {
           Durante il percorso con Epicode ho avuto modo di lavorare a progetti
           reali sia in maniera individuale che in gruppo.
         </p>
-        <HelloWorld />
+        <Col
+          xs={12}
+          md={12}
+          lg={12}
+          className="d-flex justify-content-center align-content-center"
+        >
+          <HelloWorld />
+        </Col>
       </Row>
     </Container>
   );

@@ -57,11 +57,9 @@ const Competenze = ({ setPage }) => {
       <div className="scroller">
         <div className="d-flex scroller-inner">
           {logos.map((logo, index) => (
-            <>
-              <div className="scroller-div" key={index}>
-                <img src={logo.src} alt={logo.alt} />
-              </div>
-            </>
+            <div className="scroller-div" key={index}>
+              <img src={logo.src} alt={logo.alt} />
+            </div>
           ))}
         </div>
       </div>

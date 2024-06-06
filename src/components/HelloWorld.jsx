@@ -19,16 +19,16 @@ const HelloWorld = () => {
       <Card id="project-card">
         <Card.Body className="card-body d-flex justify-content-center">
           {frontSide === true ? (
-            <div className="project-div">
+            <div id="project-div">
               <Card.Img
                 variant="top"
                 src="/Screenshot 2024-05-31 112828.png"
-                height="100%"
+                id="card-image"
               />
             </div>
           ) : (
             <div className="p-5 back-side">
-              <Card.Title className="mb-5">
+              <Card.Title>
                 L&#39;ultimo progetto che ho realizzato è il Capstone.
               </Card.Title>
               <Card.Text>
