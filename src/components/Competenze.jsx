@@ -36,31 +36,31 @@ const Competenze = ({ setPage }) => {
     <Container className="navbar scroller px-5 mt-5 " id="competenze">
       <Row className="scroller-inner">
         <Col sm={3} ref={competenze}>
-          <img src="/public/html5.svg" alt="html-logo" width={150} />
+          <img src="/html5.svg" alt="html-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/css.svg" alt="css-logo" width={150} />
+          <img src="/css.svg" alt="css-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/javascript.svg" alt="javascript-logo" width={150} />
+          <img src="/javascript.svg" alt="javascript-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/typescript.svg" alt="typescript-logo" width={150} />
+          <img src="/typescript.svg" alt="typescript-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/react.svg" alt="react-logo" width={150} />
+          <img src="/react.svg" alt="react-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/bootstrap.svg" alt="bootstrap-logo" width={150} />
+          <img src="/bootstrap.svg" alt="bootstrap-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/sass.svg" alt="sass-logo" width={150} />
+          <img src="/sass.svg" alt="sass-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/java.svg" alt="java-logo" width={150} />
+          <img src="/java.svg" alt="java-logo" width={150} />
         </Col>
         <Col sm={3}>
-          <img src="/public/spring.svg" alt="spring-logo" width={150} />
+          <img src="/spring.svg" alt="spring-logo" width={150} />
         </Col>
       </Row>
     </Container>

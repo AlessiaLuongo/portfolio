@@ -21,7 +21,7 @@ const HelloWorld = () => {
           {frontSide === true ? (
             <Card.Img
               variant="top"
-              src="/public/Screenshot 2024-05-31 112828.png"
+              src="/Screenshot 2024-05-31 112828.png"
               height="100%"
             />
           ) : (

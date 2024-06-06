@@ -41,7 +41,7 @@ const Profilo = ({ setPage }) => {
         <Col xs={12} md={12} lg={5}>
           <div className="m-3 ">
             <img
-              src="/public/Screenshot 2024-04-23 163105.png"
+              src="/Screenshot 2024-04-23 163105.png"
               className="rounded-circle"
               alt="profile-picture"
               width="100%"
