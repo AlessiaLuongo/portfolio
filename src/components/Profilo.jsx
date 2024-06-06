@@ -1,9 +1,38 @@
+import { useEffect, useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-const Profilo = () => {
+const Profilo = ({ setPage }) => {
+  const profilo = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const element = profilo.current;
+
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+      setIsVisible(isVisible);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      setPage("Profilo");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isVisible]);
+
   return (
-    <Container id="profilo">
-      <Row className="my-3">
+    <Container id="profilo" className="pb-5">
+      <Row className="my-3" ref={profilo}>
         <Col>
           <h1 className="text-center">JUNIOR FULL STACK DEVELOPER</h1>
         </Col>
@@ -42,6 +71,7 @@ const Profilo = () => {
           </p>
         </Col>
       </Row>
+      <hr className="my-5 " />
     </Container>
   );
 };

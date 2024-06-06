@@ -6,15 +6,18 @@ import Profilo from "./components/Profilo";
 import Competenze from "./components/Competenze";
 import Progetti from "./components/Progetti";
 import Contatti from "./components/Contatti";
+import { useState } from "react";
 
 function App() {
+  const [page, setPage] = useState("Profilo");
+
   return (
     <>
-      <MyNavbar />
-      <Profilo />
-      <Competenze />
-      <Progetti />
-      <Contatti />
+      <MyNavbar page={page} />
+      <Profilo setPage={setPage} />
+      <Competenze setPage={setPage} />
+      <Progetti setPage={setPage} />
+      <Contatti setPage={setPage} />
     </>
   );
 }

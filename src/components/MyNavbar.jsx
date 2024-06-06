@@ -1,6 +1,17 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-const MyNavbar = () => {
+const MyNavbar = ({ page }) => {
+  const scrollToSection = (sectionId) => {
+    if (sectionId === "Profilo") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <Navbar
       expand="lg"
@@ -15,10 +26,46 @@ const MyNavbar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#profilo">Profilo</Nav.Link>
-            <Nav.Link href="#competenze">Competenze</Nav.Link>
-            <Nav.Link href="#progetti">Progetti</Nav.Link>
-            <Nav.Link href="#contatti">Contatti</Nav.Link>
+            <p
+              href="#profilo"
+              className={page == "Profilo" ? "selected" : "notSelected"}
+              onClick={() => {
+                scrollToSection("profilo");
+              }}
+              id="navbar-p"
+            >
+              Profilo
+            </p>
+            <p
+              href="#competenze"
+              className={page == "Competenze" ? "selected" : "notSelected"}
+              onClick={() => {
+                scrollToSection("competenze");
+              }}
+              id="navbar-p"
+            >
+              Competenze
+            </p>
+            <p
+              href="#progetti"
+              className={page == "Progetti" ? "selected" : "notSelected"}
+              onClick={() => {
+                scrollToSection("progetti");
+              }}
+              id="navbar-p"
+            >
+              Progetti
+            </p>
+            <p
+              href="#contatti"
+              className={page == "Contatti" ? "selected" : "notSelected"}
+              onClick={() => {
+                scrollToSection("contatti");
+              }}
+              id="navbar-p"
+            >
+              Contatti
+            </p>
           </Nav>
         </Navbar.Collapse>
       </Container>

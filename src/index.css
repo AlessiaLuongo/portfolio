@@ -30,3 +30,52 @@ body {
     transform: translateX(calc(-50% - 0.5rem));
   }
 }
+
+.selected {
+  color: #ffff;
+}
+
+.notSelected {
+  color: #9fa2a4;
+}
+
+#navbar-p {
+  margin: 3vh;
+}
+
+#project-card {
+  background-color: #2b3035;
+  color: #9fa2a4;
+  min-height: 450px;
+  max-height: 450px;
+  overflow: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+#project-card:hover,
+#navbar-p:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 40px -10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.back-side {
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.front-side {
+  min-height: 450px;
+  max-height: 450px;
+}

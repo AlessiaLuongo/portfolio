@@ -3,9 +3,37 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Button, Form } from "react-bootstrap";
 import { sendCustomEmail } from "./Email";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const Contatti = () => {
+const Contatti = ({ setPage }) => {
+  const contatti = useRef(null);
+  const [isVisible, setIsVisibile] = useState(false);
+
+  const handleScroll = () => {
+    const element = contatti.current;
+
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+      setIsVisibile(isVisible);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      setPage("Contatti");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isVisible]);
+
   const [details, setDetails] = useState({
     subject: "",
     message: "",
@@ -24,7 +52,7 @@ const Contatti = () => {
   };
 
   return (
-    <Container id="contatti">
+    <Container id="contatti" ref={contatti}>
       <Row className="navbar text-center">
         <Col className="my-3">Come contattarmi:</Col>
         <Col xs={12} md={12} lg={12} className="my-2">
