@@ -6,6 +6,8 @@ body {
 
 .scroller {
   overflow: hidden;
+  position: relative;
+  width: 100%;
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
@@ -17,22 +19,36 @@ body {
 }
 
 .scroller-inner {
-  padding: 1rem;
   display: flex;
-  gap: 1rem;
-  width: fit-content;
   flex-wrap: nowrap;
-  animation: scroll 15s infinite linear;
+  gap: 1rem;
+  animation: scroll 5s linear infinite;
+  padding-block: 1rem;
+  width: fit-content;
 }
 
+.scroller-div {
+  padding: 20px;
+}
+
+.scroller-div img {
+  height: 120px;
+  width: 120px;
+}
+
+@media screen and (max-width: 600px) {
+  .scroller-inner {
+    animation-duration: 5s;
+  }
+}
 @keyframes scroll {
-  100% {
-    transform: translateX(calc(-50% - 0.5rem));
+  to {
+    transform: translate(calc(-50% - 0.5rem));
   }
 }
 
 .selected {
-  color: #ffff;
+  color: #ffffff;
 }
 
 .notSelected {
@@ -48,7 +64,7 @@ body {
   color: #9fa2a4;
   min-height: 450px;
   max-height: 450px;
-  overflow: hidden;
+  overflow: auto;
   transition: all 0.4s ease 0s;
 }
 
@@ -78,4 +94,8 @@ body {
 .front-side {
   min-height: 450px;
   max-height: 450px;
+}
+
+.project-div {
+  width: fit-cover;
 }

@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { Col } from "react-bootstrap";
+
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 
 const Competenze = ({ setPage }) => {
   const competenze = useRef(null);
-  const [isVisible, setIsVisibile] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
     const element = competenze.current;
@@ -14,7 +13,7 @@ const Competenze = ({ setPage }) => {
       const rect = element.getBoundingClientRect();
       const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
 
-      setIsVisibile(isVisible);
+      setIsVisible(isVisible);
     }
   };
 
@@ -32,38 +31,42 @@ const Competenze = ({ setPage }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isVisible]);
 
+  const logos = [
+    { src: "/html5.svg", alt: "html-logo" },
+    { src: "/css.svg", alt: "css-logo" },
+    { src: "/javascript.svg", alt: "javascript-logo" },
+    { src: "/typescript.svg", alt: "typescript-logo" },
+    { src: "/react.svg", alt: "react-logo" },
+    { src: "/bootstrap.svg", alt: "bootstrap-logo" },
+    { src: "/sass.svg", alt: "sass-logo" },
+    { src: "/java.svg", alt: "java-logo" },
+    { src: "/spring.svg", alt: "spring-logo" },
+    { src: "/html5.svg", alt: "html-logo" },
+    { src: "/css.svg", alt: "css-logo" },
+    { src: "/javascript.svg", alt: "javascript-logo" },
+    { src: "/typescript.svg", alt: "typescript-logo" },
+    { src: "/react.svg", alt: "react-logo" },
+    { src: "/bootstrap.svg", alt: "bootstrap-logo" },
+    { src: "/sass.svg", alt: "sass-logo" },
+    { src: "/java.svg", alt: "java-logo" },
+    { src: "/spring.svg", alt: "spring-logo" },
+  ];
+
   return (
-    <Container className="navbar scroller px-5 mt-5 " id="competenze">
-      <Row className="scroller-inner">
-        <Col sm={3} ref={competenze}>
-          <img src="/html5.svg" alt="html-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/css.svg" alt="css-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/javascript.svg" alt="javascript-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/typescript.svg" alt="typescript-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/react.svg" alt="react-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/bootstrap.svg" alt="bootstrap-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/sass.svg" alt="sass-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/java.svg" alt="java-logo" width={150} />
-        </Col>
-        <Col sm={3}>
-          <img src="/spring.svg" alt="spring-logo" width={150} />
-        </Col>
-      </Row>
+    <Container className="navbar  px-5 mt-5" id="competenze" ref={competenze}>
+      <div className="scroller">
+        <div className="d-flex scroller-inner">
+          {logos.map((logo, index) => (
+            <>
+              <div className="scroller-div" key={index}>
+                <img src={logo.src} alt={logo.alt} />
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
     </Container>
   );
 };
+
 export default Competenze;
