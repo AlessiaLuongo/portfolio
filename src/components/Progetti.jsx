@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import HelloWorld from "./HelloWorld";
 import { useEffect, useRef, useState } from "react";
-import { Col } from "react-bootstrap";
+import WeatherApp from "./WeatherApp";
 
 const Progetti = ({ setPage }) => {
   const progetti = useRef(null);
@@ -34,19 +34,15 @@ const Progetti = ({ setPage }) => {
   }, [isVisible]);
   return (
     <Container id="progetti" className="mb-5 py-4">
-      <Row className="py-5 justify-content-center align-content-center">
-        <p className="text-center m-5" ref={progetti}>
+      <Row className="py-5">
+        <p className="text-center" ref={progetti}>
           Durante il percorso con Epicode ho avuto modo di lavorare a progetti
           reali sia in maniera individuale che in gruppo.
         </p>
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="d-flex justify-content-center align-content-center"
-        >
-          <HelloWorld />
-        </Col>
+      </Row>
+      <Row className="justify-content-center align-content-center g-5">
+        <HelloWorld />
+        <WeatherApp />
       </Row>
     </Container>
   );
