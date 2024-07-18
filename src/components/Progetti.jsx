@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import HelloWorld from "./HelloWorld";
 import { useEffect, useRef, useState } from "react";
 import WeatherApp from "./WeatherApp";
+import Memory from "./Memory";
 
 const Progetti = ({ setPage }) => {
   const progetti = useRef(null);
@@ -43,6 +44,7 @@ const Progetti = ({ setPage }) => {
       <Row className="justify-content-center align-content-center g-5">
         <HelloWorld />
         <WeatherApp />
+        <Memory />
       </Row>
     </Container>
   );

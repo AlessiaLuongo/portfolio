@@ -20,7 +20,7 @@ const WeatherApp = () => {
           <Col xs={12} md={7} lg={7}>
             <Card.Body className="card-body d-flex justify-content-center ">
               {frontSide === true ? (
-                <div className="d-flex flex-column">
+                <div id="div-pic">
                   <Card.Img
                     variant="top"
                     src="/weatherapp.png"

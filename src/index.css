@@ -98,3 +98,8 @@ body {
 #handle-button:hover {
   transform: scale(1.5);
 }
+
+#div-pic {
+  width: 630px;
+  height: 300px;
+}

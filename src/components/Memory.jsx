@@ -1,13 +1,15 @@
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
+import { Button, CardText } from "react-bootstrap";
 import { useState } from "react";
-import { Button, Card, CardText, Col, Row } from "react-bootstrap";
 
-const HelloWorld = () => {
+const Memory = () => {
   const [frontSide, setFrontSide] = useState(true);
 
   const handleCardSide = () => {
     setFrontSide(!frontSide);
   };
-
   return (
     <Col
       xs={10}
@@ -21,13 +23,12 @@ const HelloWorld = () => {
           <Col xs={12} md={5} lg={5}>
             <div className="py-5 d-flex flex-column align-items-center">
               <p className="ps-3">
-                Questo è il mio progetto Capstone del corso di Epicode.
+                Questo è un piccolo Memory a tema rock/metal.
               </p>
-              <p className="ps-3">
-                Questa Web App creata con Vite si chiama Hello World e ha come
-                obiettivo di promuovere il territorio e dare modo alle persone
-                di condividere e conoscere attività e luoghi, che possono essere
-                sia outdoor che indoor.
+              <p className="ps-4">
+                Non è niente di straordinario, ma è stato un passatempo
+                divertente che mi ha aiutato a spezzare la monotonia degli studi
+                e sopravvivere alle giornate caldissime.
               </p>
             </div>
           </Col>
@@ -35,31 +36,29 @@ const HelloWorld = () => {
             <Card.Body className="card-body d-flex justify-content-center">
               {frontSide === true ? (
                 <div id="div-pic">
-                  <Card.Img
-                    variant="top"
-                    src="/Screenshot 2024-05-31 112828.png"
-                    id="card-image"
-                  />
+                  <Card.Img variant="top" src="/memory.png" id="card-image" />
                 </div>
               ) : (
-                <div>
-                  <CardText>
-                    Di seguito si troverà il link che porterà alla repository
-                    del Backend dove si troverà anche il link per la repository
-                    del Frontend.
-                  </CardText>
+                <div className="p-5">
+                  <CardText>Qui il codice su GitHub</CardText>
                   <CardText>
                     <a
                       href="https://github.com/AlessiaLuongo/Capstone-Backend"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-github"> HelloWorld</i>
+                      <i className="bi bi-github"> Memory</i>
                     </a>
                   </CardText>
+                  <CardText>E qui la versione deployata</CardText>
                   <CardText>
-                    Ho ancora tantissime idee da inserire all&#39;interno di
-                    questo progetto, quindi stay tuned!
+                    <a
+                      href="https://metal-memory.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-globe2"> Memory Game</i>
+                    </a>
                   </CardText>
                 </div>
               )}
@@ -74,4 +73,4 @@ const HelloWorld = () => {
     </Col>
   );
 };
-export default HelloWorld;
+export default Memory;
