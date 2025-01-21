@@ -51,13 +51,10 @@ const Profilo = ({ setPage }) => {
         <Col xs={12} md={12} lg={7} className="text-center text-lg-end">
           <p>Salve, sono Alessia Luongo e ho 29 anni. </p>
           <p>
-            Fin da piccola sono rimasta affascinata dall&#39;informatica e dal
-            potere della tecnologia.
-          </p>
-          <p>
-            Appena ho avuto l&#39;occasione ho deciso di intraprendere la mia
-            strada e di concludere con successo il corso Full Stack presso
-            EPICODE.
+            Sono una Junior Full Stack Developer che ha concluso con successo un
+            percorso formativo di sei mesi con l&#39;Accademia &#39;Epicode&#39;
+            e che sta partecipando attualmente a una Academy di Java organizzata
+            da Betacom.
           </p>
           <p>
             Di natura sono una persona molto attiva e affidabile, queste e altre
