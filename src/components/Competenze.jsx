@@ -50,6 +50,7 @@ const Competenze = ({ setPage }) => {
     { src: "/sass.svg", alt: "sass-logo" },
     { src: "/java.svg", alt: "java-logo" },
     { src: "/spring.svg", alt: "spring-logo" },
+    { src: "/favicon.ico", alt: "angular-logo" },
   ];
 
   return (
