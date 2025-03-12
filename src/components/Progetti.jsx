@@ -37,8 +37,8 @@ const Progetti = ({ setPage }) => {
     <Container id="progetti" className="mb-5 py-4">
       <Row className="py-5">
         <p className="text-center" ref={progetti}>
-          Durante il percorso con Epicode ho avuto modo di lavorare a progetti
-          reali sia in maniera individuale che in gruppo.
+          Durante le Academy ho avuto modo di lavorare a progetti reali sia in
+          maniera individuale che in gruppo.
         </p>
       </Row>
       <Row className="justify-content-center align-content-center g-5">
